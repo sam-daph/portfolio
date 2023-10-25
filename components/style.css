@@ -5,7 +5,6 @@
 }
 
 .btn {
-    /* background-image: radial-gradient(circle, #42a2cb, #2fbdd3, #49d6d0, #7decc3, #b9ffb5); */
     background-color: #d0edf1;
     color: black;
     letter-spacing: 1.5px;
@@ -17,7 +16,8 @@
 
 
 .btn1 {
-    background-image: radial-gradient(circle, #42a2cb, #2fbdd3, #49d6d0, #7decc3, #b9ffb5);
+    background-color: #d0edf1;
+    color: black;
     border: none;
 }
 
@@ -48,9 +48,9 @@
 
 .navbar {
   /* background-image: radial-gradient(circle, #111111, #ee33b8, #e65c0d, #ff4d4a, #fb7800); */
-  background-color: #24baff;
+  background-color: #000000;
   /* border-radius: 0 0 20px 20px; */
-  box-shadow: 0px 0px 10px 1px rgba(150, 150, 150, 0.6);
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.692);
 }
 
 .sidebar {
@@ -60,15 +60,15 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.61);
     /* background-image: radial-gradient(circle, #000000, #1d0c0d, #2f1411, #3f1c0e, #4c2705); */
-    background-color: #24baff;
+    background-color: #000000;
 }
 
 body {
     /* background-image: linear-gradient(#606c88,  #3f4c6b); */
     /* background-image: url(/dark-bg.jpg); */
-    background-color: #535353;
+    background-color: #000000;
 }
 
 .routes-icon {
@@ -106,6 +106,15 @@ body {
 
 .bg2 {
   background: #363636;
+}
+
+.bg-card {
+  background-color: rgb(46, 46, 46);
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.61);
+}
+
+.search {
+  background-color: rgb(46, 46, 46);
 }
 
 .form-create {

@@ -46,11 +46,11 @@ export const Navbar = () => {
         <Button onClick={handleButtonIn} className="btn">
           Sign-in
         </Button>
-        {/* <Button onClick={handleButtonUp} className="btn">
+        <Button onClick={handleButtonUp} className="btn">
           Sign-up
-        </Button> */}
+        </Button>
 
-        <UserButton />
+        <UserButton afterSignOutUrl="/"/>
       </div>
     </div>
   );

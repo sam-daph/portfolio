@@ -1,5 +1,5 @@
 import prismadb from "@/lib/prismadb";
-import { currentUser } from "@clerk/nextjs";
+import { auth, currentUser } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
 export async function PATCH(req: Request, {params}: {params: {companionId: string}}) {
@@ -38,6 +38,30 @@ export async function PATCH(req: Request, {params}: {params: {companionId: strin
 
     } catch (error) {
         console.log("[COMPANION_PATCH]", error);
+        return new NextResponse("Iternal error", {status: 500});
+    }
+}
+
+export async function DELETE(
+    request: Request,
+    {params}: {params: {companionId: string}}
+) {
+    try {
+        const {userId} = auth();
+
+        if (!userId) {
+            return new NextResponse("Unauthorized" , {status: 401});
+        }
+
+        const portfolio = await prismadb.portfolio.delete({
+            where: {
+                userId,
+                id: params.companionId
+            }
+        });
+        return NextResponse.json(portfolio);
+    } catch (error) {
+        console.log("[COMPANION_DELETE]", error);
         return new NextResponse("Iternal error", {status: 500});
     }
 }

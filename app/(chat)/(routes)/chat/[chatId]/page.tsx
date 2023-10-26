@@ -9,7 +9,7 @@ interface ChatIdProps {
     }
 }
 
-export default function PageChat({
+export default async function PageChat({
     params
 }: ChatIdProps) {
     const { userId } = auth();
@@ -18,7 +18,7 @@ export default function PageChat({
         return redirectToSignIn();
     }
 
-    const portfolio = prismadb.portfolio.findUnique({
+    const portfolio = await prismadb.portfolio.findUnique({
         where: {
             id: params.chatId,
         },

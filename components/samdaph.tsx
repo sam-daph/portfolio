@@ -1,7 +1,6 @@
 import { Portfolio } from "@prisma/client";
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -24,11 +23,11 @@ interface SamdaphProps {
 export const Samdaph = ({ data }: SamdaphProps) => {
   if (data.length === 0) {
     return (
-      <div className="pt-10 flex flex-col items-center justify-center space-y-3">
+      <div className="pt-20 flex flex-col items-center justify-center space-y-3">
         <div className="relative w-60 h-60">
           <Image fill className="grayscale" alt="empty" src="/empty.png" />
         </div>
-        <p>image Not Found</p>
+        <p className="pt-4">image Not Found</p>
       </div>
     );
   }

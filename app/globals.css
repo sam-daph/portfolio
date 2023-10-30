@@ -71,6 +71,31 @@ body,
     --ring: 0 0% 83.1%;
   }
 }
+
+.hero-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  height: auto;
+  border-radius: 20px;
+  background-color: rgb(56, 56, 56)
+}
+
+.category-content {
+  height: auto;
+  background-color: #272727;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.category {
+  margin: 50px 10px;
+  padding: 5px 20px;
+  border-radius: 30px;
+
+  height: auto;
+  background-color: #505050;
+}
  
 @layer base {
   * {

@@ -30,7 +30,7 @@ export const Categories = ({ data }: CategoriesProps) => {
   };
 
   return (
-    <div className="category w-full overflow-y-auto space-4 flex p-2">
+    <div className="category w-full overflow-y-auto flex p-2 pt-10">
       <button
         onClick={() => onClick(undefined)}
         className={cn(`btn3 rounded-md mr-3 md:text-sm px-4`,

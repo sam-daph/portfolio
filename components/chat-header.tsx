@@ -55,7 +55,7 @@ export const ChatHeader = ({ portfolio }: ChatHeaderClientProps) => {
   };
 
   return (
-    <div className="flex w-full justify-between items-center border-b border-primary/10 pb-4">
+    <div className="flex w-full justify-between items-center border-b border-primary/40 pb-4">
       <div className="flex gap-x-2 items-center">
         <Button onClick={() => router.back()} size="icon" variant="ghost">
           <ChevronLeft className="h-8 w-8" />

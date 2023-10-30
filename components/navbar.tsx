@@ -8,6 +8,7 @@ import { ModeToggle } from "./theme-toggle";
 import { MobileSidebar } from "./mobile-sidebar";
 import { useRouter } from "next/navigation";
 import { auth } from "@clerk/nextjs";
+import { SearchInput } from "./search-input";
 
 export const Navbar = () => {
 
@@ -25,23 +26,25 @@ export const Navbar = () => {
       <div className="flex items-center">
         <MobileSidebar />
         <Link href="/">
-          <Image
+          <p className="logo hidden md:block">SAMDAPH.<span>AI</span></p>
+          {/* <Image
             src="/logo1.png"
             width="80"
             height="80"
             alt="logo"
             className="hidden md:block"
-          />
+          /> */}
         </Link>
       </div>
       <div>
+        <SearchInput />
+      </div>
+      <div className="flex items-center gap-x-3">
+        <ModeToggle />
         <Button className="btn" size="sm">
           Upgrade
           <Layers className="h-4 h-4 ml-1" />
         </Button>
-      </div>
-      <div className="flex items-center gap-x-3">
-        <ModeToggle />
 
         <Button onClick={handleButtonIn} className="btn">
           Sign-in

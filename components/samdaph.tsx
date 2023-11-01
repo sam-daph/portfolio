@@ -23,7 +23,7 @@ interface SamdaphProps {
 export const Samdaph = ({ data }: SamdaphProps) => {
   if (data.length === 0) {
     return (
-      <div className="pt-20 flex flex-col items-center justify-center space-y-3">
+      <div className="empty pt-20 pb-20 flex flex-col items-center justify-center space-y-3">
         <div className="relative w-60 h-60">
           <Image fill className="grayscale" alt="empty" src="/empty.png" />
         </div>
@@ -33,7 +33,8 @@ export const Samdaph = ({ data }: SamdaphProps) => {
   }
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grod-cols-4 lg-grid-cols-5 xl:grid-cols-6 gap-10 pb-10">
+    <>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg-grid-cols-5 xl:grid-cols-4 gap-10 pb-10">
       {data.map((item) => (
         <Card
           key={item.id}
@@ -56,12 +57,12 @@ export const Samdaph = ({ data }: SamdaphProps) => {
                 {item.description}
               </p>
             </CardHeader>
-            <CardFooter className="flex items-center justify-between text-xs text-muted-foreground">
+            <CardFooter className="flex items-center justify-between text-lg text-[#e75e8d]">
               <p>
                 @{item.username}
               </p>
               <div className="flex items-center">
-                <MessagesSquare className="w-3 h-3 mr-1" />
+                <MessagesSquare className="w-4 h-4 mr-1" />
                 {item._count.message}
               </div>
             </CardFooter>
@@ -69,5 +70,6 @@ export const Samdaph = ({ data }: SamdaphProps) => {
         </Card>
       ))}
     </div>
+    </>
   );
 };

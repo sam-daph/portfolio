@@ -30,28 +30,34 @@ export const Categories = ({ data }: CategoriesProps) => {
   };
 
   return (
-    <div className="category w-full overflow-y-auto flex p-2 pt-10">
-      <button
-        onClick={() => onClick(undefined)}
-        className={cn(`btn3 rounded-md mr-3 md:text-sm px-4`,
-          !categoryId ? "bg1" : "bg2")}>
-        test
-      </button>
-
-      {data.map((item) => (
+    <>
+      <span className="title">Categories</span>
+      <div className="category-btn">
         <button
-          key={item.id}
-          onClick={() => onClick(item.id)}
+          onClick={() => onClick(undefined)}
           className={cn(
-            `
-                btn3 flex items-center text-center text-xs mr-3 md:text-sm px-4 mb-2 md:px-4 py-2 md:py-3 rounded-md
-            `,
-            item.id === categoryId ? "bg1" : "bg2"
+            `btn3 rounded-md mr-3 md:text-sm px-4`,
+            !categoryId ? "bg1" : "bg2"
           )}
         >
-          {item.name}
+          Divers
         </button>
-      ))}
-    </div>
+
+        {data.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => onClick(item.id)}
+            className={cn(
+              `
+                btn3 flex items-center text-center text-xs mr-3 md:text-sm px-4 mb-2 md:px-4 py-2 md:py-3 rounded-md
+            `,
+              item.id === categoryId ? "bg1" : "bg2"
+            )}
+          >
+            {item.name}
+          </button>
+        ))}
+      </div>
+    </>
   );
 };

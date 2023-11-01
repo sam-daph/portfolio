@@ -5,9 +5,9 @@ export const SectionHero = () => {
     return (
         <div className="section-hero">
             <div className="section-content">
-                <p>Welcome to Samdaph.ai</p>
-                <h1><span>BROWSE </span>OUR POPULAR CHARACTERS HERE</h1>
-                <Button className="browse">Browse New</Button>
+                <p>Bienvenue sur Samdaph.ai</p>
+                <h1><span>PARCOUREZ </span>NOS PERSONNAGES POPULAIRES ICI</h1>
+                <Button className="browse">Parcourir Nouveau</Button>
             </div>
             
         </div>

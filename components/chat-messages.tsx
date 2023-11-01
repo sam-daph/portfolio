@@ -31,7 +31,7 @@ export const ChatMessages = ({
                 isLoading={fakeLoading}
                 src={Portfolio.src}
                 role="system"
-                content={`Hello, I am ${Portfolio.name}, ${Portfolio.description}`}
+                content={`Bonjour!, Je suis ${Portfolio.name}, ${Portfolio.description}`}
             />
 
             {messages.map((message) => (
@@ -39,7 +39,7 @@ export const ChatMessages = ({
                     key={message.content}
                     role={message.role}
                     content={message.content}
-                    src={message.src}/>
+                    src={Portfolio.src}/>
             ))}
 
             {isLoading && (

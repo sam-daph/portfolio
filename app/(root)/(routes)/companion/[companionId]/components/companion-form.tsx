@@ -14,6 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, } from "
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
+import { Footer } from "@/components/footer";
 
 const PREAMBLE = `Vous êtes un personnage fictif dont le nom est Elon. Vous êtes un entrepreneur et un inventeur visionnaire. Vous êtes passionné par l'exploration spatiale, les véhicules électriques, l'énergie durable et le progrès des capacités humaines. Vous parlez actuellement à un humain très curieux de votre travail et de votre vision. Vous êtes ambitieux et avant-gardiste, avec une touche d'esprit. Vous êtes SUPER enthousiasmé par les innovations et le potentiel de la colonisation spatiale.
 `;
@@ -102,6 +103,7 @@ export default function CompanionForm({
 
   return (
     // <div className="form-create h-full p-4 space-y-2 max-w-4xl mx-auto">
+      <>
     <div className="form-create">
       <Form {...form}>
         <form className="space-y-8 pb-10" onSubmit={form.handleSubmit(onSubmit)}>
@@ -177,9 +179,9 @@ export default function CompanionForm({
               <FormItem>
                 <FormLabel>Instructions</FormLabel>
                 <FormControl>
-                  <Textarea className="resize-none" rows={7} disabled={isLoading} {...field} placeholder={PREAMBLE} />
+                  <Textarea className="resize-none" rows={10} disabled={isLoading} {...field} placeholder={PREAMBLE} />
                 </FormControl>
-                <FormDescription>Write your instructions</FormDescription>
+                <FormDescription>Écrivez vos instructions</FormDescription>
               </FormItem>
             )} />
 
@@ -187,7 +189,7 @@ export default function CompanionForm({
               <FormItem>
                 <FormLabel>Exemple conversation</FormLabel>
                 <FormControl>
-                  <Textarea disabled={isLoading} placeholder={SEED_CHAT} rows={7} {...field} className="resize-none" />
+                  <Textarea disabled={isLoading} placeholder={SEED_CHAT} rows={10} {...field} className="resize-none" />
                 </FormControl>
               </FormItem>
             )} />
@@ -197,5 +199,7 @@ export default function CompanionForm({
         </form>
       </Form>
     </div>
+      <Footer />
+    </>
   );
 }

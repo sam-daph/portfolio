@@ -27,7 +27,7 @@ export const Samdaph = ({ data }: SamdaphProps) => {
         <div className="relative w-60 h-60">
           <Image fill className="grayscale" alt="empty" src="/empty.png" />
         </div>
-        <p className="pt-4">image Not Found</p>
+        <p className="pt-4">Image non trouvée</p>
       </div>
     );
   }

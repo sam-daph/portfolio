@@ -36,20 +36,20 @@ export default async function RootPage({ searchParams }: RootPageProps) {
 
   return (
     <>
-    <div className="hero-container">
-      <SectionHero />
-      <div className="category">
+      <div className="hero-container">
+        <SectionHero />
+        <div className="category">
           <Categories data={categories} />
-      </div>
-      
-      <div className="content-card">
-        <h1>Personnages</h1>
-        <div className="image-card">
-        <Samdaph data={data} />
+        </div>
+
+        <div className="content-card">
+          <h1>Personnages</h1>
+          <div className="image-card">
+            <Samdaph data={data} />
+          </div>
         </div>
       </div>
-    </div>
       <Footer />
-  </>
+    </>
   );
 }

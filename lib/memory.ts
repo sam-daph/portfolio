@@ -1,6 +1,6 @@
 import { Redis } from "@upstash/redis";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { PineconeClient } from "@pinecone-database/pinecone";
+import { Index, PineconeClient, RecordMetadata } from "@pinecone-database/pinecone";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
 
 export type CompanionKey = {
@@ -8,7 +8,6 @@ export type CompanionKey = {
   modelName: string;
   userId: string;
 };
-type Metadata = { size: number, tags?: string[] | null };
 export class MemoryManager {
   
   private static instance: MemoryManager;
@@ -35,14 +34,17 @@ export class MemoryManager {
   ) {
     const pineconeClient = <PineconeClient>this.vectorDBClient;
 
+    // const pineconeIndex = pineconeClient.Index(
+    //   process.env.PINECONE_INDEX! || ""
+    // );
+
     const pineconeIndex = pineconeClient.Index(
-      process.env.PINECONE_INDEX! || ""
-    );
+      process.env.PINECONE_INDEX || ('' as string)
+    ) as unknown as Index<RecordMetadata>;
 
     
     const vectorStore = await PineconeStore.fromExistingIndex(
-      new OpenAIEmbeddings({ openAIApiKey: process.env.OPENAI_API_KEY }),
-      { pineconeIndex }
+      new OpenAIEmbeddings({ openAIApiKey: process.env.OPENAI_API_KEY! }), {pineconeIndex}
     );
 
 

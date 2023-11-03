@@ -25,6 +25,18 @@ export const Sidebar = () => {
             pro: true,
         },
         {
+            icon: <Image src="/equipement.png" width="40" height="40" alt="test"/>,
+            href: '/Feature',
+            label: 'Fonctionnalité',
+            pro: false,
+        },
+        {
+            icon: <Image src="/a-propos.png" width="40" height="40" alt="test"/>,
+            href: '/about',
+            label: 'À propos',
+            pro: false,
+        },
+        {
             icon: <Image src="/reglage.png" width="40" height="40" alt="test"/>,
             href: '/settings',
             label: 'Paramètres',

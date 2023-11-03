@@ -61,14 +61,3 @@ model Message {
 
   @@index([companionId])
 }
-
-
-model PayPalTransaction {
-  id                        String    @id @default(uuid())
-  userId                    String    @unique // You can use a unique identifier for the order
-  paypalCustomerId          String?   @unique @map(name: "paypal_customer_id")
-  paypalSubscriptionId      String?   @unique @map(name: "paypal_subscription_id")
-  paypalPriceId             String?   @unique @map(name: "paypal_price_id")
-  paypalCurrentPeriodEndId  String?   @unique @map(name: "paypal_current_period_end")
-
-}

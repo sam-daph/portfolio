@@ -93,7 +93,7 @@ body,
   width: auto;
   margin: 4% 0;
   padding: 5px 20px;
-  background-color: #383838;
+  background-color: #1f2122;
   border-radius: 30px;
 }
 
@@ -101,13 +101,13 @@ body,
   width: auto;
   margin: 4% 10px;
   padding: 5px 20px;
-  background-color: #383838;
+  background-color: #1f2122;
   display: flex;
   overflow-y: hidden;
 }
 
 .content-card {
-  background-color: #383838;
+  background-color: #1f2122;
   border-radius: 30px;
   height: auto;
 }

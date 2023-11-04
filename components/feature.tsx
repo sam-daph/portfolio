@@ -6,10 +6,7 @@ export const Featuree = () => {
     <>
       <div className="feature-about">
         <h1 className="title mb-6">Fonctionnalité</h1>
-        <Head>
-          <title>Demo for My Apllication</title>
-        </Head>
-        <div className="section-hero test">
+        <div className="test">
           <h1 className="title-feature">
             Bienvenue sur Samdaph.ai ! Découvrez comment notre application
             révolutionne la création d'avatars virtuels et les interactions avec
@@ -19,13 +16,10 @@ export const Featuree = () => {
           </h1>
         </div>
         <h1 className="category-video">Découvrez comment notre application fonction</h1>
-        <video controls width="100%" className="mt-10">
+        <video controls width="100%" className="mt-6 vid">
           <source src="/demo-for-project-portfolio.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
-      </div>
-      <div className="footer fixed bottom-0">
-        <Footer />
       </div>
     </>
   );

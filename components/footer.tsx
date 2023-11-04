@@ -1,9 +1,12 @@
 export const Footer = () => {
     return (
         <div className="footer">
-            <p>
+            <div className="child-footer">
+               <p>
                 Copyright © 2023 SamdaphAI. All rights reserved
-            </p>
+                </p> 
+            </div>
+            
         </div>
     )
 }

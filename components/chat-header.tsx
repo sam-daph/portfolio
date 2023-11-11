@@ -83,7 +83,7 @@ export const ChatHeader = ({ portfolio }: ChatHeaderClientProps) => {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuItem
-              className="flex justify-center items-center m-4"
+              className="flex justify-start items-center mt-7 cursor-pointer hover:text-primary/50"
               onClick={() => router.push(`/companion/${portfolio.id}`)}
             >
               <Edit className="w-4 h-4 mr-2" />
@@ -91,7 +91,7 @@ export const ChatHeader = ({ portfolio }: ChatHeaderClientProps) => {
             </DropdownMenuItem>
             <DropdownMenuItem
               onClick={onDelete}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center cursor-pointer mt-2 hover:text-primary/50"
             >
               <Trash className="w-4 h-4 mr-2" />
               Delete
